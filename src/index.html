@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://cdn.schiphol.nl/static/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://cdn.schiphol.nl/static/favicon-16x16.png"
+    />
+    <title>Schiphol asessment</title>
+  </head>
+  <body>
+    <div class="asessment">
+      <div class="container">
+        <h1 class="gradient-text">
+          Find your<br />
+          flight
+        </h1>
+        <div class="search-input-container">
+          <div class="rw-input-submit destination-airport-input">
+            <input
+              class="rw-input-text rw-input-submit__input"
+              type="search"
+              autocomplete="false"
+              placeholder="Find flights by destination airport"
+              name="query"
+            />
+          </div>
+          <button class="rw-button view-toggle">
+            <span class="table-label">Table</span>
+            <span class="cards-label">Cards</span>
+            view
+          </button>
+        </div>
+
+        <div class="flights-holder">
+          <!-- Visible when cards view is active -->
+          <ul class="flights-cards">
+            <!-- Content inserted by Javascript -->
+          </ul>
+
+          <!-- Visible when table view is active -->
+          <div class="rw-table">
+            <table id="flights-table">
+              <thead>
+                <th>Flight identifier</th>
+                <th>Flight nr</th>
+                <th>Airport</th>
+                <th>Expected time</th>
+                <th>Original time</th>
+                <th>Url</th>
+                <th>Score</th>
+              </thead>
+              <tbody>
+                <!-- Content inserted by Javascript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

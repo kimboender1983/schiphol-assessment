@@ -1,0 +1,38 @@
+{
+  "name": "frontend-assignment",
+  "version": "1.0.0",
+  "description": "A small assignment for frontend developers at Schiphol",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "yarn dev:api & yarn dev:client && yarn stop-server",
+    "dev:api": "json-server --watch flights.json",
+    "dev:client": "webpack-dev-server",
+    "stop-server": "kill-port 3000",
+    "test": "json-server --watch flights.json & jest && yarn stop-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.2",
+    "css-loader": "^6.4.0",
+    "html-webpack-plugin": "^5.4.0",
+    "jest": "^27.3.0",
+    "jest-fetch-mock": "^3.0.3",
+    "json-server": "^0.17.0",
+    "kill-port": "^1.6.1",
+    "sass": "^1.43.2",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.0",
+    "ts-jest": "^27.0.7",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0"
+  }
+}

@@ -1,0 +1,104 @@
+.container {
+  max-width: calc(990px + 2rem);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.search-input-container {
+  padding: 1rem 0;
+  display: flex;
+  .destination-airport-input {
+    flex-grow: 1;
+    padding-right: 1rem;
+  }
+  button.view-toggle {
+    margin-left: auto;
+    .table-label {
+      display: inline;
+    }
+    .cards-label {
+      display: none;
+    }
+    &.table {
+      .table-label {
+        display: none;
+      }
+      .cards-label {
+        display: inline;
+      }
+    }
+  }
+}
+
+tr {
+  cursor: pointer;
+  &:hover {
+    background-color: lightgrey;
+  }
+}
+
+.flights-cards {
+  padding: 0;
+  margin: 0 0 2rem;
+  list-style-type: none;
+
+  li {
+    box-shadow: 0 0.0125em 0.625em 0 rgb(0 0 0 / 10%);
+    padding: 1.125rem 1.25rem 0.8125rem;
+    transition: box-shadow 0.3s ease-out;
+    margin-bottom: 1rem;
+
+    &:hover {
+      box-shadow: 0 0.0125em 0.625em 0 rgb(0 0 0 / 50%);
+    }
+
+    dl {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      @media screen and (max-width: 700px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      div {
+        @media screen and (max-width: 700px) {
+          margin-bottom: 1rem;
+          &:nth-child(3),
+          &:nth-child(4) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.flights-holder {
+  .rw-table {
+    display: none;
+  }
+  .flights-cards {
+    display: block;
+  }
+  &.table {
+    .rw-table {
+      display: block;
+    }
+    .flights-cards {
+      display: none;
+    }
+  }
+}
+
+.gradient-text {
+  background-image: $gradient-flights;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  padding-bottom: 0.5rem;
+}
+
+.highlight {
+  background-color: yellow;
+  text-transform: capitalize;
+}
