@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "build": "webpack",
-    "dev": "yarn dev:api & yarn dev:client && yarn stop-server",
-    "dev:api": "json-server --watch flights.json",
+    "dev": "yarn api & yarn dev:client && yarn stop-server",
+    "api": "json-server --watch flights.json",
     "dev:client": "webpack-dev-server",
     "stop-server": "kill-port 3000",
     "test": "json-server --watch flights.json & jest && yarn stop-server"
