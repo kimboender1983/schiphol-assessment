@@ -1,3 +1,11 @@
+# Hi
+Thanks for letting me take this assessment. Please be aware of the limited time i had for making this test. I had to cut some corners to make a workimg example.
+To serve flight.json i have used json-server. When you build the application, make sure json-server is serving on port 3000 (yarn api).
+
+Hope to meet soon!
+
+----------------------------------
+
 # Assignment
 Please create a page that contains an input field.
 When the user enters *at least* three characters into this input field,
